@@ -34,10 +34,9 @@
 #define SERVER_NAME_LEN 256
 
 static const char http_503[] =
-    "HTTP/1.1 503 Service Temporarily Unavailable\r\n"
-    "Content-Type: text/html\r\n"
-    "Connection: close\r\n\r\n"
-    "Backend not available";
+    "HTTP/1.0 503 Service Unavailable\r\n"
+    "\r\n"
+    "";
 
 static int parse_http_header(const char *, size_t, char **);
 static int get_header(const char *, const char *, size_t, char **);
